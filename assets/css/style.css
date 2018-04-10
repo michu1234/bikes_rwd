@@ -1,0 +1,57 @@
+/* Table of contents
+=====================
+// 1. Variables
+// 2. Placeholders
+// 3. Functions
+// 4. Mixins
+// 10. Animations
+=====================
+*/
+/* Table of contents
+=====================
+// 1. Font Faces
+// 2. Base
+// 3. Layout
+// 4. Block + element
+// 5. Modifier
+// 6. State
+// 7. Animations
+=====================
+*/
+@font-face {
+  font-family: "lato Regular";
+  src: url("assets/fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "lato Bold";
+  src: url("assets/fonts/Lato-Bold.ttf");
+}
+
+@font-face {
+  font-family: "lato Italic";
+  src: url("assets/fonts/Lato-Italic.ttf");
+}
+
+@font-face {
+  font-family: "lato Black";
+  src: url("assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: "lato Semibold";
+  src: url("assets/fonts/Lato-Semibold.ttf");
+}
+
+@font-face {
+  font-family: "lato Heavy";
+  src: url("assets/fonts/Lato-Heavy.ttf");
+}
+
+html {
+  font: normal normal 400 62.5%/normal "Lato Regular", Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  color: #ffffff;
+  user-select: none;
+  max-width: 1920px;
+}

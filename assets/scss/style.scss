@@ -1,0 +1,49 @@
+@import 'helpers';
+
+
+/* Table of contents
+=====================
+// 1. Font Faces
+// 2. Base
+// 3. Layout
+// 4. Block + element
+// 5. Modifier
+// 6. State
+// 7. Animations
+=====================
+*/
+
+
+// 1. Font Faces
+@font-face {
+    @include font-face("lato Regular", "assets/fonts/Lato-Regular.ttf")
+}
+
+@font-face {
+    @include font-face("lato Bold", "assets/fonts/Lato-Bold.ttf")
+}
+
+@font-face {
+    @include font-face("lato Italic", "assets/fonts/Lato-Italic.ttf")
+}
+
+@font-face {
+    @include font-face("lato Black", "assets/fonts/Lato-Black.ttf")
+}
+
+@font-face {
+    @include font-face("lato Semibold", "assets/fonts/Lato-Semibold.ttf")
+}
+
+@font-face {
+    @include font-face("lato Heavy", "assets/fonts/Lato-Heavy.ttf")
+}
+
+// 2. Base
+html {
+@include font(normal, normal, 400, 62.5%, normal, "Lato Regular");
+font-size: 62.5%;
+color: $pure-white;
+user-select: none;
+max-width: 1920px;
+}
