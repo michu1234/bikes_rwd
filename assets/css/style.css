@@ -7,7 +7,7 @@
 // 10. Animations
 =====================
 */
-h2, label, .header__phone, .button, .img--wrapper::before {
+h2, label, .header__phone, .button, .terms--h2:first-child, .img--wrapper::before {
   text-transform: uppercase;
 }
 
@@ -71,7 +71,7 @@ header, footer, .img--wrapper {
 html {
   font: normal normal 400 62.5%/normal "Lato Regular", Arial, Helvetica, sans-serif;
   font-size: 62.5%;
-  color: #ffffff;
+  background: #ffffff;
   user-select: none;
   width: 100%;
   overflow-x: hidden;
@@ -168,8 +168,25 @@ header::after {
   height: 1px;
 }
 
+.terms {
+  max-width: 1311px;
+  padding: 57px 5% 85px 5%;
+  margin-bottom: 70px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  background-color: #ffffff;
+}
+
+@media screen and (min-width: 880px) {
+  .terms {
+    padding: 57px 103px 85px 102px;
+  }
+}
+
 footer {
   padding: 61px 0 99px 0;
+  border-top: 1px solid #e2e2e4;
 }
 
 footer::after {
@@ -400,6 +417,23 @@ footer::after {
   color: #e46917;
 }
 
+.terms--h2 {
+  color: #e46917;
+  max-width: 341px;
+  width: 100%;
+  padding-bottom: 12px;
+  text-transform: initial;
+}
+
+.terms--h2:first-child {
+  border-bottom: 1px solid #dcdcdc;
+  margin-bottom: 50px;
+}
+
+.terms--h2:last-of-type {
+  margin-top: 60px;
+}
+
 .info--h2 {
   line-height: 32px;
   letter-spacing: 0.6px;
@@ -450,6 +484,12 @@ footer::after {
   .form--p {
     margin: 0;
   }
+}
+
+.terms--p {
+  font-size: 1.4rem;
+  line-height: 24px;
+  padding: 15px 0 15px 0;
 }
 
 .footer--p {
