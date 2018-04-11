@@ -11,11 +11,11 @@ h2, label, .header__phone, .button, .img--wrapper::before {
   text-transform: uppercase;
 }
 
-.img--wrapper::before {
+header::after, footer::after, .img--wrapper::before {
   position: absolute;
 }
 
-.img--wrapper {
+header, footer, .img--wrapper {
   position: relative;
 }
 
@@ -159,8 +159,26 @@ header {
   margin-bottom: 39px;
 }
 
+header::after {
+  background: url("../img/lines.png") no-repeat;
+  content: "";
+  bottom: -1px;
+  right: 0;
+  width: 210px;
+  height: 1px;
+}
+
 footer {
   padding: 61px 0 99px 0;
+}
+
+footer::after {
+  background: url("../img/lines.png") no-repeat;
+  content: "";
+  top: -1px;
+  right: -13px;
+  width: 210px;
+  height: 1px;
 }
 
 .footer__logo1 {
@@ -187,7 +205,7 @@ footer {
   line-height: 11px;
   font-family: "Lato Heavy";
   font-weight: 800;
-  margin: 20px 0 10px 0;
+  margin: 16px 0 10px 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -222,8 +240,14 @@ footer {
   width: 100%;
   border-radius: 6px;
   border: 1px solid #dcdcdc;
-  padding: 57px 45px 83px 45px;
-  background: url("../img/shape-1.png") no-repeat bottom right;
+  padding: 57px 5% 83px 5%;
+  background: #ffffff url("../img/shape-1.png") no-repeat bottom right;
+}
+
+@media screen and (min-width: 500px) {
+  .main__registration {
+    padding: 57px 2% 83px 2%;
+  }
 }
 
 .main__info {
@@ -232,7 +256,7 @@ footer {
   border-bottom: 1px solid #e2e2e4;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .main__info {
     text-align: left;
   }
@@ -250,15 +274,17 @@ footer {
   height: 62px;
   border-radius: 6px;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #ffffff;
   font-size: 2.4rem;
   font-weight: 700;
-  line-height: 20.57px;
   letter-spacing: 0.47px;
 }
 
 .info__list {
-  width: 100%;
+  width: 40%;
   margin-top: 50px;
   display: flex;
   max-width: 200px;
@@ -266,7 +292,7 @@ footer {
   justify-content: space-evenly;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .info__list {
     margin: 0;
     max-width: 100px;
@@ -274,15 +300,23 @@ footer {
   }
 }
 
-@media screen and (min-width: 1060px) {
+@media screen and (min-width: 1260px) {
   .info__list {
     max-width: 209px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .info__list:not(:last-child) {
+    margin-left: 120px;
   }
 }
 
 @media screen and (min-width: 1060px) {
   .info__list:not(:last-child) {
     padding-right: 96px;
+    margin-left: 130px;
   }
 }
 
@@ -302,6 +336,15 @@ footer {
 
 .button--wrapper {
   text-align: right;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1310px) {
+  .button--wrapper {
+    flex-direction: row;
+  }
 }
 
 .font--middle {
@@ -342,6 +385,7 @@ footer {
 
 .button--info {
   background: #e46917;
+  min-width: 215px;
 }
 
 .form--h2 {
@@ -360,9 +404,9 @@ footer {
   letter-spacing: 0.6px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 669px) {
   .info--h2 {
-    max-width: 167px;
+    min-width: 170px;
   }
 }
 
@@ -374,10 +418,10 @@ footer {
   padding: 20px 0 20px 0;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .info--p {
     padding: 0;
-    margin-left: 40px;
+    margin-left: 120px;
     max-width: 534px;
   }
 }
@@ -394,16 +438,16 @@ footer {
   font-size: 1.6rem;
   line-height: 20.57px;
   text-decoration: underline;
-  display: inline-block;
-  margin: 0 0 5px 0;
+  display: block;
+  margin: 0 0 8px 0;
   letter-spacing: 0.31px;
   display: block;
+  margin-left: auto;
 }
 
-@media screen and (min-width: 1290px) {
+@media screen and (min-width: 1310px) {
   .form--p {
-    margin-right: 60px;
-    display: inline-block;
+    margin: 0;
   }
 }
 
@@ -424,8 +468,21 @@ footer {
   font-size: 1.2rem;
   line-height: 15.89px;
   bottom: -3px;
-  left: 30px;
+  left: 20px;
   z-index: 2;
+}
+
+.button--arrow {
+  padding-left: 15px;
+  font-size: 3.5rem;
+  margin-top: -5px;
+  display: none;
+}
+
+@media screen and (min-width: 955px) {
+  .button--arrow {
+    display: block;
+  }
 }
 
 a:visited {
@@ -445,5 +502,5 @@ a:active {
 }
 
 .button--info:hover {
-  background: #ea7a30;
+  background: #ec8642;
 }

@@ -127,10 +127,32 @@ header {
     border-bottom: 1px solid $light-gray;
     padding: 68px 0 35px 0;
     margin-bottom: 39px;
+    @extend %relative;
+}
+
+header::after {
+    background: url("../img/lines.png") no-repeat;
+    content: "";
+    @extend %absolute;
+    bottom: -1px;
+    right: 0;
+    width: 210px;
+    height: 1px;
 }
 
 footer {
     padding: 61px 0 99px 0;  
+    @extend %relative;
+}
+
+footer::after {
+    background: url("../img/lines.png") no-repeat;
+    content: "";
+    @extend %absolute;
+    top: -1px;
+    right: -13px;
+    width: 210px;
+    height: 1px;
 }
 
 .footer__logo1 {
@@ -159,7 +181,7 @@ footer {
     @extend %to-uppercase;
     font-family: "Lato Heavy";
     font-weight: 800;
-    margin: 20px 0 10px 0;
+    margin: 16px 0 10px 0;
     @media screen and (min-width: 768px){
         margin: 0 0 0 0;
     }
@@ -182,18 +204,22 @@ footer {
 
 .main__registration {
     min-height: 475px;
+    // min-width: 360px;
     width: 100%;
     border-radius: 6px;
     border: 1px solid $almost-white;   
-    padding: 57px 45px 83px 45px;
-    background: url("../img/shape-1.png") no-repeat bottom right;
+    padding: 57px 5% 83px 5%;
+    background: $pure-white url("../img/shape-1.png") no-repeat bottom right;
+    @media screen and (min-width: 500px){
+        padding: 57px 2% 83px 2%;
+    }
 }
 
 .main__info {
     padding: 81px 0 99px 0;
     text-align: center;
     border-bottom: 1px solid $light-gray;
-    @media screen and (min-width: 767px){
+    @media screen and (min-width: 768px){
         text-align: left;
     }
     @media screen and (min-width: 861px){
@@ -207,41 +233,44 @@ footer {
     height: 62px;
     border-radius: 6px;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     color: $pure-white;
     font-size: 2.4rem;
     font-weight: 700;
-    line-height: 20.57px;
+ 
     @extend %to-uppercase;
     letter-spacing: 0.47px;
 }
 
 .info__list {
-    width: 100%;
+    width: 40%;
     margin-top: 50px;
     display: flex;
     max-width: 200px;
     flex-direction: row;
     justify-content: space-evenly;
-    @media screen and (min-width: 767px){
+    @media screen and (min-width: 768px){
         margin: 0;
         max-width: 100px;
         display: block;
     }
-    @media screen and (min-width: 1060px){
+    @media screen and (min-width: 1260px){
         max-width: 209px;
+        width: 100%;
     }
 }
 
 .info__list:not(:last-child) {
+    @media screen and (min-width: 768px){
+        margin-left: 120px;
+    }
     @media screen and (min-width: 1060px){
         padding-right: 96px;
+        margin-left: 130px;
     }
-}
-
-.info__list-item {
-
-    
 }
 
 // 5. Modifier
@@ -258,6 +287,12 @@ footer {
 
 .button--wrapper {
     text-align: right;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (min-width: 1310px){
+        flex-direction: row;
+    }
 }
 .font--middle {
     font-size: 1.3rem;
@@ -301,6 +336,7 @@ footer {
     background: $deep-orange;
     @extend %transition;
     @extend %pointer;
+    min-width: 215px;
 }
 
 .form--h2 {
@@ -318,8 +354,8 @@ footer {
 line-height: 32px;
 letter-spacing: 0.6px;
 
-@media screen and (min-width: 769px){
-    max-width: 167px;
+@media screen and (min-width: 669px){
+    min-width: 170px;
 }
 }
 
@@ -329,9 +365,9 @@ letter-spacing: 0.6px;
     line-height: 22px;
     letter-spacing: 0.35px;  
     padding: 20px 0 20px 0;
-    @media screen and (min-width: 767px){
+    @media screen and (min-width: 768px){
         padding: 0;
-        margin-left: 40px;
+        margin-left: 120px;
         max-width: 534px;
     }
 }
@@ -348,13 +384,13 @@ letter-spacing: 0.6px;
     font-size: 1.6rem;
     line-height: 20.57px;
     text-decoration: underline;
-    display: inline-block;
-    margin: 0 0 5px 0;
+    display: block;
+    margin: 0 0 8px 0;
     letter-spacing: 0.31px;   
     display: block;
-    @media screen and (min-width: 1290px){
-        margin-right: 60px;
-        display: inline-block;
+    margin-left: auto;
+    @media screen and (min-width: 1310px){
+        margin: 0;
     }
 }
 
@@ -378,8 +414,18 @@ letter-spacing: 0.6px;
     @extend %to-uppercase;
     @extend %absolute;
     bottom: -3px;
-    left: 30px;
+    left: 20px;
     z-index: 2;
+}
+
+.button--arrow {
+    padding-left: 15px;
+    font-size: 3.5rem;
+    margin-top: -5px;
+    display: none;
+    @media screen and (min-width: 955px){
+        display: block;
+    }
 }
 
 // 6. State
@@ -401,7 +447,7 @@ a:active {
 }
 
 .button--info:hover {
-    background: lighten($deep-orange, 6%);
+    background: lighten($deep-orange, 10%);
     @extend %transition;
 }
 // 7. Animations
