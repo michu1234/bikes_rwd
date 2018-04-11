@@ -1,6 +1,4 @@
 @import 'helpers';
-
-
 /* Table of contents
 =====================
 // 1. Font Faces
@@ -13,37 +11,369 @@
 =====================
 */
 
-
 // 1. Font Faces
 @font-face {
-    @include font-face("lato Regular", "assets/fonts/Lato-Regular.ttf")
+    @include font-face("lato Regular", "../fonts/Lato-Regular.ttf")
 }
 
 @font-face {
-    @include font-face("lato Bold", "assets/fonts/Lato-Bold.ttf")
+    @include font-face("lato Bold", "../fonts/Lato-Bold.ttf")
 }
 
 @font-face {
-    @include font-face("lato Italic", "assets/fonts/Lato-Italic.ttf")
+    @include font-face("lato Italic", "../fonts/Lato-Italic.ttf")
 }
 
 @font-face {
-    @include font-face("lato Black", "assets/fonts/Lato-Black.ttf")
+    @include font-face("lato Black", "../fonts/Lato-Black.ttf")
 }
 
 @font-face {
-    @include font-face("lato Semibold", "assets/fonts/Lato-Semibold.ttf")
+    @include font-face("lato Semibold", "../fonts/Lato-Semibold.ttf")
 }
 
 @font-face {
-    @include font-face("lato Heavy", "assets/fonts/Lato-Heavy.ttf")
+    @include font-face("lato Heavy", "../fonts/Lato-Heavy.ttf")
 }
 
 // 2. Base
 html {
-@include font(normal, normal, 400, 62.5%, normal, "Lato Regular");
-font-size: 62.5%;
-color: $pure-white;
-user-select: none;
-max-width: 1920px;
+    @include font(normal, normal, 400, 62.5%, normal, "Lato Regular");
+    font-size: 62.5%;
+    color: $pure-white;
+    user-select: none;
+    width: 100%;
 }
+
+body {
+    background: url("../img/shape-12.png") no-repeat 0 267px;
+    width: 100%;
+    color: $hell-dark;
+    @media screen and (min-width: 768px){
+        background: url("../img/shape-12.png") no-repeat 0 188px;
+    }
+}
+
+.container {
+    max-width: 1311px;
+    width: 100%;
+    padding: 0 4% 0 4%;
+}
+
+h2 {
+    font-family: "Lato Black";
+    font-size: 2.4rem;
+    line-height: 22px;
+    @extend %to-uppercase;  
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:link {
+    font-size: 1.4rem;
+    line-height: 32px;
+    text-decoration: underline;
+    letter-spacing: 0.35px;    
+    color: $hell-dark;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+
+label {
+    color: $pure-white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 22px;
+    @extend %to-uppercase;  
+}
+
+input[type="text"], input[type="password"], select {
+    border: none;
+    width: 100%;
+    height: 45px;
+    border-radius: 6px;
+    background-color: $pure-white;   
+    text-indent: 20px;
+    color: $sand-gray;
+    font-family: "Lato Semibold";
+    font-size: 2.2rem;
+    line-height: 22px; 
+    margin-bottom: 29px;   
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+}
+
+input[type="password"] {
+    margin-bottom: 43px; 
+}
+
+select {
+    max-width: 725px;
+    font-weight: 600;
+    @extend %to-uppercase;
+}
+
+// 3. Layout
+header {
+    border-bottom: 1px solid $light-gray;
+    padding: 68px 0 35px 0;
+    margin-bottom: 39px;
+}
+
+footer {
+    padding: 61px 0 99px 0;  
+}
+
+.footer__logo1 {
+    margin-right: 37px;
+    opacity: 0.5;    
+}
+
+.footer__logo2 {
+    text-align: right;
+    opacity: 0.5;
+}
+
+// 4. Block + element
+.header__flag:not(:last-child) {
+    margin-right: 10px
+}
+
+.header__phone {
+    color: $hell-dark;
+    font-size: 3rem;
+    line-height: 22px;
+    @extend %to-uppercase;
+    font-family: "Lato Heavy";
+    font-weight: 800;
+    margin: 20px 0 10px 0;
+    @media screen and (min-width: 768px){
+        margin: 0 0 0 0;
+    }
+    @media screen and (min-width: 912px) {
+        font-size: 3.6rem;
+    }
+}
+
+.main__form {
+    background: $sky-blue url("../img/user-icon.png") no-repeat bottom left;
+    min-height: 475px;
+    max-width: 870px;
+    width: 100%;
+    border-radius: 6px;
+    padding:  57px 45px 40px 45px;
+    @media screen and (min-width: 993px){
+        padding:  57px 100px 40px 45px;
+    }
+}
+
+.main__registration {
+    min-height: 475px;
+    min-width: 350px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid $almost-white;   
+    padding: 57px 45px 83px 45px;
+    background: url("../img/shape-1.png") no-repeat bottom right;
+}
+
+.main__info {
+    padding: 81px 0 99px 0;
+    text-align: center;
+    border-bottom: 1px solid $light-gray;
+    @media screen and (min-width: 767px){
+        text-align: left;
+    }
+    @media screen and (min-width: 861px){
+    padding: 81px 0 99px 45px;
+    }
+}
+
+.button {
+    width: 100%;
+    max-width: 340px;
+    height: 62px;
+    border-radius: 6px;
+    border: none;
+
+    color: $pure-white;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 20.57px;
+    @extend %to-uppercase;
+    letter-spacing: 0.47px;
+}
+
+.info__list {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    max-width: 200px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    @media screen and (min-width: 767px){
+        margin: 0;
+        max-width: 100px;
+        display: block;
+    }
+    @media screen and (min-width: 1060px){
+        max-width: 209px;
+    }
+}
+
+.info__list:not(:last-child) {
+    @media screen and (min-width: 1060px){
+        padding-right: 96px;
+    }
+}
+
+.info__list-item {
+
+    
+}
+
+// 5. Modifier
+.input--wrapper {
+    width: 100%;
+}
+
+.input--wrapper2 {
+    width: 100%;
+@media screen and (min-width: 993px){
+    width: 49%;
+}
+}
+
+.button--wrapper {
+    text-align: right;
+}
+.font--middle {
+    font-size: 2.4rem;
+    font-weight: 400;
+    font-family: "Lato Regular";
+}
+
+.font--small {
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: "Lato Regular";
+    text-transform: initial;
+}
+
+.font--bold {
+    font-family: "Lato Heavy";
+    font-weight: 800;
+    letter-spacing: 0.35px; 
+}
+
+// .select--small {
+//     color: #b7b7b7;
+//     font-family: "Lato Regular";    
+//     font-weight: 300;
+// }
+
+.button--success {
+    background-color: $spring-green;
+    @extend %transition;
+    @extend %pointer;
+}
+
+.button--info {
+    background: $deep-orange;
+    @extend %transition;
+    @extend %pointer;
+}
+
+.form--h2 {
+    color: #ffffff;
+    border-bottom: 1px solid $water-blue;
+    margin-bottom: 39px;
+    padding-bottom: 8px;
+}
+
+.registration--h2 {
+    color: $deep-orange;
+}
+
+.info--h2 {
+line-height: 32px;
+letter-spacing: 0.6px;
+
+@media screen and (min-width: 769px){
+    max-width: 167px;
+}
+}
+
+.info--p {
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 22px;
+    letter-spacing: 0.35px;  
+    padding: 20px 0 20px 0;
+    @media screen and (min-width: 767px){
+        padding: 0;
+        margin-left: 40px;
+        max-width: 534px;
+    }
+}
+
+.registration--p {
+    font-size: 1.8rem;
+    line-height: 32px;
+    letter-spacing: 0.35px;   
+    padding: 55px 0 40px 0;  
+}
+
+.footer--p {
+    font-size: 1.3rem;
+    line-height: 22px;    
+}
+
+.img--wrapper {
+    @extend %relative;
+}
+
+.img--wrapper::before {
+    content: "POWERED BY:";
+    color: $middle-gray;
+    font-size: 1.2rem;
+    line-height: 15.89px;
+    @extend %to-uppercase;
+    @extend %absolute;
+    bottom: -3px;
+    left: -90px;
+    z-index: 2;
+}
+
+// 6. State
+a:visited {
+    color: $sand-gray;
+}
+
+a:hover {
+    color: $sky-blue;
+}
+
+a:active {
+    color: $deep-orange;
+}
+
+.button--success:hover {
+    background-color: lighten($spring-green, 4%);
+    @extend %transition;
+}
+
+.button--info:hover {
+    background: lighten($deep-orange, 6%);
+    @extend %transition;
+}
+// 7. Animations
