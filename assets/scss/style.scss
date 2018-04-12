@@ -170,6 +170,15 @@ main {
     }
 }
 
+.register__form {
+    max-width: 871px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid $almost-white;
+    background-color: $pure-white; 
+    padding: 57px 100px 48px 100px;   
+}
+
 footer {
     padding: 61px 0 99px 0;  
     @extend %relative;

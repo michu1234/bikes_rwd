@@ -204,6 +204,15 @@ main {
   }
 }
 
+.register__form {
+  max-width: 871px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  background-color: #ffffff;
+  padding: 57px 100px 48px 100px;
+}
+
 footer {
   padding: 61px 0 99px 0;
   border-top: 1px solid #e2e2e4;
