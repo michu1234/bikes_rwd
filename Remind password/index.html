@@ -1,14 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.min.css">
-    <title>Remind password</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <title>Login</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-md-4 d-flex justify-content-between">
+
+                    <img class="header__logo1" src="../assets/img/polski-rower.png" alt="Polski Rower">
+                    <div class="img--wrapper">
+                        <img class="header__logo2" src="../assets/img/logo.png" alt="FilFri">
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-self-end justify-content-end">
+                    <p class="header__phone">
+                        <span class="font--small">INFOLINIA:</span>
+                        <span class="font--middle">+48</span> 86 222 34 88</p>
+                </div>
+                <div class="col-md-2 d-flex align-self-end justify-content-end">
+                    <img class="header__flag" src="../assets/img/pl.png" alt="polish language">
+                    <img class="header__flag" src="../assets/img/en.png" alt="english language">
+                    <img class="header__flag" src="../assets/img/no.png" alt="norwegian language">
+                </div>
+
+            </div>
+        </header>
+        <main>
+            <section class="password-reminder col-md-12">
+                <h2 class="password-reminder--h2">przypomnienie hasła</h2>
+                <p class="password-reminder--p">Proszę wprowadzić nazwę konta lub e-mail:</p>
+                <form action="">
+                    <label class="label--dark" for="password-reminder__input">E-MAIL:</label>
+                    <div class="input--wrapper d-flex flex-column flex-lg-row align-items-end align-items-lg-start justify-content-lg-center">
+                        <input id="password-reminder__input" class="input--light" type="text" placeholder="mariusz.kowalski@gmail.com">
+                        <button class="button button--info">utwórz konto <span class="button--arrow">→</span></button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div class="row">
+                <div class="col-md-1 col-2 footer__logo1">
+                    <img class="" src="../assets/img/polski-rower.png" alt="Polski Rower">
+                </div>
+                <div class="col-md-4 col-5">
+                    <p class="footer--p">BikeU Sp. z o. o.
+                        <br/>ul. Emilii Plater 53,
+                        <br/> 00-113 Warszawa
+                        <br/>
+                        <br/> Tel.: 86 222 34 88
+                        <br/> email: bok@polskirowermiejski.pl
+                    </p>
+                </div>
+                <div class="col-md-1 col-3 offset-md-5 footer__logo2">
+                    <img src="../assets/img/logo.png" alt="FilFri">
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
+
 </html>

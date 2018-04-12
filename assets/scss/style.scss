@@ -140,6 +140,10 @@ header::after {
     height: 1px;
 }
 
+main {
+    min-height: calc(100vh - 253px - 188px);
+}
+
 .terms {
     max-width: 1311px;
     padding: 57px 5% 85px 5%;
@@ -150,6 +154,19 @@ header::after {
     background-color: $pure-white;
     @media screen and (min-width: 880px) {
         padding: 57px 103px 85px 102px;
+    }
+}
+
+.password-reminder {
+    max-width: 1311px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid $almost-white;
+    padding: 57px 5% 95px 5%;
+    margin-bottom: 58px;
+    background: $pure-white url("../img/shape-1.png") no-repeat bottom right;
+    @media screen and (min-width: 680px){
+        padding: 57px 100px 95px 102px;
     }
 }
 
@@ -300,6 +317,15 @@ footer::after {
 }
 }
 
+.label--dark {
+    color: $hell-dark;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase; 
+    margin-bottom: 10px;    
+}
+
 .button--wrapper {
     text-align: right;
     display: flex;
@@ -392,6 +418,15 @@ letter-spacing: 0.6px;
 }
 }
 
+.password-reminder--h2 {
+    max-width: 341px;
+    width: 100%;
+    color: $deep-orange;
+    border-bottom: 1px solid $almost-white;
+    padding-bottom: 12px; 
+    margin-bottom: 32px;
+}
+
 .info--p {
     width: 100%;
     font-size: 1.4rem;
@@ -433,6 +468,12 @@ letter-spacing: 0.6px;
     padding: 15px 0 15px 0;
 }
 
+.password-reminder--p {
+    font-weight: 700;
+    line-height: 24px;   
+    margin-bottom: 34px; 
+}
+
 .footer--p {
     font-size: 1rem;
 @media screen and (min-width: 500px){
@@ -464,6 +505,19 @@ letter-spacing: 0.6px;
     display: none;
     @media screen and (min-width: 955px){
         display: block;
+    }
+}
+
+form .input--light {
+    max-width: 726px;
+    width: 100%;
+    height: 60px;
+    border-radius: 6px;
+    border: 1px solid $cloud-gray;
+    background-color: $pure-white;  
+    margin-right: 0;
+    @media screen and (min-width: 992px){
+        margin-right: 46px;
     }
 }
 
