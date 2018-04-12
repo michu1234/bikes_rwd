@@ -28,9 +28,9 @@
                         <span class="font--middle">+48</span> 86 222 34 88</p>
                 </div>
                 <div class="col-md-2 d-flex align-self-end justify-content-end">
-                    <img class="header__flag" src="../assets/img/pl.png" alt="polish language">
-                    <img class="header__flag" src="../assets/img/en.png" alt="english language">
-                    <img class="header__flag" src="../assets/img/no.png" alt="norwegian language">
+                    <a class="header__flag" href="#"><img src="../assets/img/pl.png" alt="polish language"></a>
+                    <a class="header__flag" href="#"><img src="../assets/img/en.png" alt="english language"></a>
+                    <a class="header__flag" href="#"><img src="../assets/img/no.png" alt="norwegian language"></a>
                 </div>
 
             </div>
@@ -38,8 +38,49 @@
         <main>
             <section class="register">
                 <div class="row">
-                    <div class="col-md-7 register__form"></div>
-                    <div class="col-md-5 register__details"></div>
+                    <div class="col-md-7 register__form">
+                        <h2 class="register--h2">rejestracja</h2>
+                        <form action="">
+                                <label for="" class="label--dark">miasto</label>
+                                <select class="input--light text-uppercase" name="" id="">
+                                    <option value="">szczecinek</option>
+                                </select>
+                                <label for="" class="label--dark">imię:</label>
+                                <input type="text" class="input--light" placeholder="Mariusz">
+                                <label for="" class="label--dark">nazwisko:</label>
+                                <input type="text" class="input--light" placeholder="Kowalski">
+                                <label for="" class="label--dark">płeć:</label>
+                                <input type="text" class="input--light" placeholder="Mężczyzna">
+                                <label for="" class="label--dark">telefon:</label>
+                                <input type="text" class="input--light" placeholder="+48 501 523 569">
+                                <p class="register-hint--p">służy do wypożyczania roweru w terminalu<br/> i logowania do aplikacji mobilnej</p>
+                                <label for="" class="label--dark">pin:</label>
+                                <input type="text" class="input--light" placeholder="1254">
+                                <p class="register-hint--p">nadaj 4 cyfrowy kod PIN</p>
+                                <label for="" class="label--dark">e-mail:</label>
+                                <input type="text" class="input--light" placeholder="mariusz.kowalski@gmail.com">
+                                <p class="register-hint--p">podaj swój adres email -<br/> otrzymasz email rejestracyjny</p>
+                                <label for="" class="label--dark">login:</label>
+                                <input type="text" class="input--light" placeholder="mariusz.kowalski">
+                                <p class="register-hint--p">służy do zarządzania Twoim kontem<br/> użytkownika na stronie filfri.eu</p>
+                                <label for="" class="label--dark">hasło:</label>
+                                <input type="text" class="input--light" placeholder="*************">
+                                <p class="register-hint--p">służy do logowania na Twoje konto<br/> użytkownika na stronie filfri.eu</p>
+                                <label for="" class="label--dark">powtórz hasło:</label>
+                                <input type="text" class="input--light" placeholder="*************">
+                                <label for="" class="label--dark"></label>
+                        </form>
+                    </div>
+                    <div class="col-md-5 register__details">
+                            <p class="register__details--p">Aby korzystać z systemu wypełnij wszystkie pola formularza</p>
+                            <ul class="register__details-list">
+                            <li>login i hasło służą do zarządzania Twoim kontem w systemie i dokonywania płatności</li>
+                            <li>numer telefonu oraz PIN służą do wypożyczania roweru w terminalu i aplikacji mobilnej</li>
+                            <li>po zakończonym procesie rejestracji otrzymasz mail z linkiem aktywacyjnym. Kliknij go aby aktywować konto. Sprawdź również zakładkę SPAM w swoim programie pocztowym - czasami zdarza się że nasze maile z niewiadomych przyczyn właśnie tam trafiają</li>
+                            </ul>
+                            <h2 class="register__details--h2">Zapoznaj się z naszym systemem </h2>
+                            <p class="register__details--p">Filfri Bikes – polski system bezobsługowych wypożyczalni rowerów. Kompletne rozwiązanie dla miast, gmin i hoteli. Zaprojektowaliśmy go tak aby wszystkie czynności które ma do wykonania użytkownik systemu – rejestracja, wypożyczenie i zwrot były możliwie najprostsze</p>
+                    </div>
                 </div>
             </section>
         </main>

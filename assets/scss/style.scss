@@ -47,12 +47,8 @@ html {
 }
 
 body {
-    background: url("../img/shape-12.png") no-repeat 0 267px;
     width: 100%;
     color: $hell-dark;
-    @media screen and (min-width: 768px){
-        background: url("../img/shape-12.png") no-repeat 0 188px;
-    }
 }
 
 .container {
@@ -177,6 +173,7 @@ main {
     border: 1px solid $almost-white;
     background-color: $pure-white; 
     padding: 57px 100px 48px 100px;   
+    margin-bottom: 33px; 
 }
 
 footer {
@@ -190,7 +187,7 @@ footer::after {
     content: "";
     @extend %absolute;
     top: -1px;
-    right: -13px;
+    right: 0px;
     width: 210px;
     height: 1px;
 }
@@ -245,7 +242,7 @@ footer::after {
 
 .main__registration {
     min-height: 475px;
-    // min-width: 360px;
+    min-width: 250px;
     width: 100%;
     border-radius: 6px;
     border: 1px solid $almost-white;   
@@ -314,7 +311,29 @@ footer::after {
     }
 }
 
+.register__details-list {
+    max-width: 382px;
+    width: 100%;
+    list-style: initial;
+    list-style-position: inside;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 24px;   
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 // 5. Modifier
+.body--background {
+    background: url("../img/shape-12.png") no-repeat 0 267px;
+    @media screen and (min-width: 768px){
+        background: url("../img/shape-12.png") no-repeat 0 188px;
+    }
+}
+
 .input--wrapper {
     width: 100%;
 }
@@ -393,11 +412,35 @@ footer::after {
     color: #ffffff;
     border-bottom: 1px solid $water-blue;
     margin-bottom: 39px;
-    padding-bottom: 8px;
+    padding-bottom: 12px;
 }
 
 .registration--h2 {
     color: $deep-orange;
+    border-bottom: 1px solid $almost-white;
+    max-width: 341px;
+    width: 100%;
+    padding-bottom: 12px;
+    margin: 0;
+}
+
+.register--h2 {
+    color: $deep-orange;
+    border-bottom: 1px solid $almost-white;
+    max-width: 341px;
+    width: 100%;
+    padding-bottom: 12px;
+    margin-bottom: 33px;
+}
+
+.register__details--h2 {
+    max-width: 341px;
+    border-bottom: 1px solid $almost-white;
+    width: 100%;
+    color: $deep-orange;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
 }
 
 .terms--h2 {
@@ -453,7 +496,7 @@ letter-spacing: 0.6px;
     font-size: 1.8rem;
     line-height: 32px;
     letter-spacing: 0.35px;   
-    padding: 55px 0 40px 0;  
+    padding: 53px 0 40px 0;  
 }
 
 .form--p {
@@ -481,6 +524,34 @@ letter-spacing: 0.6px;
     font-weight: 700;
     line-height: 24px;   
     margin-bottom: 34px; 
+    font-size: 1.4rem;
+}
+
+.register-hint--p {
+    line-height: 16px;    
+    font-size: 1.4rem;
+    @extend %relative;
+}
+
+.register__details--p {
+    line-height: 24px;
+    font-size: 1.4rem;
+    letter-spacing: 0.35px;
+}
+
+.register__details--p:first-child {
+    font-weight: 700;
+}
+
+.register-hint--p::before {
+    content: "";
+    background: url("../img/info.png") no-repeat top left;
+    width: 18px;
+    height: 18px;
+    display: block;
+    @extend %absolute;
+    top: 0;
+    left: -26px;
 }
 
 .footer--p {
@@ -512,7 +583,7 @@ letter-spacing: 0.6px;
     font-size: 3.5rem;
     margin-top: -5px;
     display: none;
-    @media screen and (min-width: 955px){
+    @media screen and (min-width: 980px){
         display: block;
     }
 }
