@@ -176,6 +176,10 @@ main {
     margin-bottom: 33px; 
 }
 
+.register__details {
+    padding: 82px 0 0 56px;
+}
+
 footer {
     padding: 61px 0 99px 0;  
     @extend %relative;
@@ -313,13 +317,13 @@ footer::after {
 }
 
 .register__details-list {
-    max-width: 382px;
     width: 100%;
     list-style: initial;
     list-style-position: inside;
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 24px;   
+    margin-bottom: 67px;
 }
 
 .row {
@@ -442,6 +446,8 @@ footer::after {
     line-height: 32px;
     text-transform: uppercase;
     letter-spacing: 0.6px;
+    padding-bottom: 34px;
+    margin-bottom: 26px;
 }
 
 .terms--h2 {
@@ -532,16 +538,8 @@ letter-spacing: 0.6px;
     line-height: 16px;    
     font-size: 1.4rem;
     @extend %relative;
-}
-
-.register__details--p {
-    line-height: 24px;
-    font-size: 1.4rem;
-    letter-spacing: 0.35px;
-}
-
-.register__details--p:first-child {
-    font-weight: 700;
+    padding: 0 0 30px 10px;
+    margin-top: -10px;
 }
 
 .register-hint--p::before {
@@ -551,8 +549,24 @@ letter-spacing: 0.6px;
     height: 18px;
     display: block;
     @extend %absolute;
-    top: 0;
+    top: 8px;
     left: -26px;
+}
+
+.register-hint--p:nth-of-type(2)::before{
+    top: 0;
+}
+
+.register__details--p {
+    line-height: 24px;
+    font-size: 1.4rem;
+    letter-spacing: 0.35px;
+    max-width: 384px;
+    width: 100%;
+}
+
+.register__details--p:first-child {
+    font-weight: 700;
 }
 
 .footer--p {
